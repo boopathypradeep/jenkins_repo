@@ -1,4 +1,4 @@
-package com.kkr.ProjectKKR;
+package com.brokenlinks;
 
 import java.io.IOException;
 import java.net.URL;
@@ -33,8 +33,7 @@ public class Links extends BaseClass {
 				if (statusCode == 200) {
 				launchHeadlessBrowser();
 					launchURL(url);
-					maximize();
-					
+					maximize();					
 					PageObjectManager p = new PageObjectManager();
 					int statusCode1 = 0;
 					String[] st = null;
@@ -62,7 +61,6 @@ public class Links extends BaseClass {
 					createFolder();
 					CSVWritter(li, url);
 					print("Details of links in given URL is stored in location: C:\\temp");
-					
 					exitBrowser("QUIT");
 				} else {
 					print("Please enter valid link");

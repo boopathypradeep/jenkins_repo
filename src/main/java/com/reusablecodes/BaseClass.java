@@ -55,7 +55,7 @@ public static void launchURL(String url) {
 
 }
 public static String readPropertyFile(String key) throws IOException {
-	FileInputStream stream=new FileInputStream("C:\\new eclipse workspace\\BrokenLinks\\src\\test\\resource\\BrokenLinks.properties");
+	FileInputStream stream=new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resource\\BrokenLinks.properties");
 Properties properties=new Properties();
 properties.load(stream);
 return properties.get(key).toString();
